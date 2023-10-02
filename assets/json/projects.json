@@ -1,0 +1,102 @@
+{
+  "Project": [
+    "3D",
+    "Animation",
+    "Design Web",
+    "Commu",
+    "Photographie",
+    "Dessin",
+    "Jeux vidéos"
+  ],
+
+  "HelloWorld": [
+    {
+      "nom": "HelloWorld",
+      "number": "No. 1",
+      "description": "HelloWorld est un projet ...",
+      "link": "",
+      "image": "assets/images/hw.jpg",
+      "color": ""
+    },
+
+    {}
+  ],
+
+  "Iolce": [
+    {
+      "nom": "Iolce",
+      "number": "No. 2",
+      "description": "Input, Output / Lire et Communiquer. Découverte et interprétation de contenu sous une nouvelle forme. Ce projet m'a permis d'organiser et de concevoir du contenu Web depuis une conférence.",
+      "link": "https://demasynathan.be/projets/iolceaout/",
+      "language": "Html, Css, JS",
+
+      "image": "assets/images/iolce.jpg",
+      "color": "#d3d8e4"
+    }
+  ],
+
+  "RUX": [
+    {
+      "nom": "Rethinking UX",
+      "number": "No. 3",
+      "description": "Rethinking UX est un projet ...",
+      "link": "",
+      "language": "Html, Css, JS",
+
+      "image": "assets/images/rux.jpg",
+      "color": ""
+    }
+  ],
+
+  "Dataplay": [
+    {
+      "nom": "Dead&Dumb",
+      "number": "No. 4",
+      "description": "Dataplay, jouer avec des données. Nous devions mettre en pratique nous nouvelles connaissances en matière de JSon et exporter le projet sur GitHub. Et quoi de mieux pour s'amuser que les morts les plus stupides de l'histoire. ",
+      "link": "https://demasynathan.be/projets/Dataplay/",
+      "language": "Html, Scss, Js, Json",
+
+      "image": "assets/images/dataplay.jpg",
+      "color": "#8c857e"
+    }
+  ],
+
+  "JS Jam": [
+    {
+      "nom": "JS Jam",
+      "number": "No. 5",
+      "description": "JS Jam est mon projet de fin d'année de 2e. Nous devions trouver une problèmatique et chercher comment la résoudre. Je suis parti du fait que les étudiants boudaient le JavaScript. Mon projet s'articule autour d'une vulgarisation &laquo;&hairsp;grenouillesque&hairsp;&raquo;.",
+      "link": "https://demasynathan.be/projets/tfaaout/",
+      "language": "Html, Scss, Js, Json, Gsap",
+
+      "image": "assets/images/jsjam.jpg",
+      "color": "#bde1fc"
+    }
+  ],
+
+  "Portefolio": [
+    {
+      "nom": "Portfolio",
+      "number": "No. 6",
+      "description": "Mon portefolio a pour but de reprendre la totalité de mes connaissances en un seul projet.",
+      "link": "",
+      "language": "Html, Css, Js, Json, Gsap, Php",
+
+      "image": "assets/images/test.jpg",
+      "color": ""
+    }
+  ],
+
+  "Ilab": [
+    {
+      "nom": "Ilab",
+      "number": "No. 7",
+      "description": "Ilab est un projet ...",
+      "link": "",
+      "language": "Html, Css, JS, Php",
+
+      "image": "assets/images/test.jpg",
+      "color": ""
+    }
+  ]
+}
