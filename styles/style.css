@@ -1,0 +1,93 @@
+:root {
+  font-family: articulat-cf, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  font-size: 22px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.titre {
+  font-weight: 700;
+  font-size: 46px;
+}
+
+.titre--big {
+  font-size: 61px;
+  line-height: 1.2;
+}
+
+.choose {
+  box-sizing: border-box;
+  width: 45%;
+  padding-top: 22vh;
+  padding-left: 35px;
+  padding-right: 3%;
+  max-height: 100vh;
+}
+
+.choose__grid {
+  width: 55%;
+  height: 100vh;
+  box-sizing: border-box;
+
+  padding: 7px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: center;
+  overflow: hidden;
+}
+
+.btn__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  padding: 15px 30px;
+  border-radius: 34px;
+  border: 2px solid #2e2e2e;
+  margin: 7.5px;
+}
+
+.test {
+  width: 28%;
+  display: block;
+  margin: 10px;
+  height: 23%;
+  border-radius: 26px;
+  background-image: url(../assets/images/affiche_2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.choose__grid:nth-child(6n) {
+  margin-right: 50px;
+}
+
+/* A modif  */
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  align-content: center;
+}

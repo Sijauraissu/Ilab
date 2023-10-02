@@ -3,100 +3,86 @@
     "3D",
     "Animation",
     "Design Web",
-    "Commu",
-    "Photographie",
+    "Communication graphique",
     "Dessin",
+    "Photographie",
     "Jeux vidéos"
   ],
 
-  "HelloWorld": [
+  "3D": [
     {
-      "nom": "HelloWorld",
-      "number": "No. 1",
-      "description": "HelloWorld est un projet ...",
-      "link": "",
-      "image": "assets/images/hw.jpg",
-      "color": ""
+      "nom": "Environement 3D",
+      "image": "https://cdnb.artstation.com/p/assets/images/images/058/613/909/large/carole-demasy-b2a1-tielve-j-envi.jpg?1674575268",
+      "etudiant": "Tielve. J"
     },
 
-    {}
-  ],
-
-  "Iolce": [
     {
-      "nom": "Iolce",
-      "number": "No. 2",
-      "description": "Input, Output / Lire et Communiquer. Découverte et interprétation de contenu sous une nouvelle forme. Ce projet m'a permis d'organiser et de concevoir du contenu Web depuis une conférence.",
-      "link": "https://demasynathan.be/projets/iolceaout/",
-      "language": "Html, Css, JS",
-
-      "image": "assets/images/iolce.jpg",
-      "color": "#d3d8e4"
+      "nom": "Environement 3D",
+      "image": "https://cdnb.artstation.com/p/assets/images/images/047/054/739/large/carole-demasy-b2a1-cobut-f-archi-int.jpg?1646660626",
+      "etudiant": "Cobut. J"
     }
   ],
 
-  "RUX": [
+  "Animation": [
     {
-      "nom": "Rethinking UX",
-      "number": "No. 3",
-      "description": "Rethinking UX est un projet ...",
-      "link": "",
-      "language": "Html, Css, JS",
-
-      "image": "assets/images/rux.jpg",
-      "color": ""
+      "nom": "HOLY",
+      "image": "",
+      "video": "https://player.vimeo.com/video/232261037?h=b24248aed0",
+      "etudiant": "Kevin Phan Lac"
+    },
+    {
+      "nom": "Immersion",
+      "image": "",
+      "video": "https://player.vimeo.com/video/358390731?h=3638909eff",
+      "etudiant": "Zinia Scorier, Marie Royer, Mathis Dubrul"
+    },
+    {
+      "nom": "HIGHER",
+      "image": "",
+      "video": "https://player.vimeo.com/video/356672406?h=31fef9581d",
+      "etudiant": "Suzie Kiehn"
     }
   ],
 
-  "Dataplay": [
+  "Design Web": [
     {
-      "nom": "Dead&Dumb",
-      "number": "No. 4",
-      "description": "Dataplay, jouer avec des données. Nous devions mettre en pratique nous nouvelles connaissances en matière de JSon et exporter le projet sur GitHub. Et quoi de mieux pour s'amuser que les morts les plus stupides de l'histoire. ",
-      "link": "https://demasynathan.be/projets/Dataplay/",
-      "language": "Html, Scss, Js, Json",
+      "nom": "Bostrom",
+      "image": "",
+      "etudiant": "Evoroko"
+    },
 
-      "image": "assets/images/dataplay.jpg",
-      "color": "#8c857e"
+    {
+      "nom": "No Clip",
+      "image": "",
+      "etudiant": "Rafko"
     }
   ],
 
-  "JS Jam": [
+  "Photographie": [
     {
-      "nom": "JS Jam",
-      "number": "No. 5",
-      "description": "JS Jam est mon projet de fin d'année de 2e. Nous devions trouver une problèmatique et chercher comment la résoudre. Je suis parti du fait que les étudiants boudaient le JavaScript. Mon projet s'articule autour d'une vulgarisation &laquo;&hairsp;grenouillesque&hairsp;&raquo;.",
-      "link": "https://demasynathan.be/projets/tfaaout/",
-      "language": "Html, Scss, Js, Json, Gsap",
-
-      "image": "assets/images/jsjam.jpg",
-      "color": "#bde1fc"
+      "nom": "",
+      "image": ""
     }
   ],
 
-  "Portefolio": [
+  "Illustration": [
     {
-      "nom": "Portfolio",
-      "number": "No. 6",
-      "description": "Mon portefolio a pour but de reprendre la totalité de mes connaissances en un seul projet.",
-      "link": "",
-      "language": "Html, Css, Js, Json, Gsap, Php",
-
-      "image": "assets/images/test.jpg",
-      "color": ""
+      "nom": "",
+      "image": ""
     }
   ],
 
-  "Ilab": [
+  "Communication graphique": [
     {
-      "nom": "Ilab",
-      "number": "No. 7",
-      "description": "Ilab est un projet ...",
-      "link": "",
-      "language": "Html, Css, JS, Php",
+      "nom": "Tribute to Helvetica",
+      "image": "https://freight.cargo.site/t/original/i/ee89b465afd22a23f532246816c54093fc8b52d77f73a7080ffbdfd31530655a/Capture-decran-2022-05-05-a-17.09.33.png"
+    }
+  ],
 
-      "image": "assets/images/test.jpg",
-      "color": ""
+  "Jeux vidéos": [
+    {
+      "nom": "",
+      "image": ""
     }
   ]
 }
