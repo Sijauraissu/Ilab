@@ -41,6 +41,18 @@
       "image": "",
       "video": "https://player.vimeo.com/video/356672406?h=31fef9581d",
       "etudiant": "Suzie Kiehn"
+    },
+    {
+      "nom": "UN ELDORADO",
+      "image": "",
+      "video": "https://player.vimeo.com/video/342699369?h=abcf54ce3a",
+      " etudiant": "Nicolas Gemoets"
+    },
+    {
+      "nom": "La relève des gardes",
+      "image": "",
+      "video": "https://player.vimeo.com/video/489565892?h=de21bb2d67",
+      "etudiant": "Anonyme"
     }
   ],
 
@@ -55,6 +67,12 @@
       "nom": "No Clip",
       "image": "",
       "etudiant": "Rafko"
+    },
+
+    {
+      "nom": "",
+      "image": "",
+      "etudiant": ""
     }
   ],
 
