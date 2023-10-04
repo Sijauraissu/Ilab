@@ -4,6 +4,7 @@
   font-style: normal;
   line-height: 1.4;
   font-size: 22px;
+  color: #2e2e2e;
 }
 
 body {
@@ -26,13 +27,18 @@ main {
 
 .titre--big {
   font-size: 61px;
-  line-height: 1.2;
+  line-height: 95%;
+  margin: 0;
+}
+
+.paragraphe {
+  margin: 15px 0 45px 0;
 }
 
 .choose {
   box-sizing: border-box;
   width: 45%;
-  padding-top: 22vh;
+  padding-top: 25vh;
   padding-left: 35px;
   padding-right: 3%;
   max-height: 100vh;
@@ -43,7 +49,7 @@ main {
   height: 100vh;
   box-sizing: border-box;
 
-  padding: 7px;
+  padding: 10px 5px 10px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -62,25 +68,25 @@ main {
 }
 
 .btn {
-  padding: 15px 30px;
+  padding: 10px 27px;
   border-radius: 34px;
   border: 2px solid #2e2e2e;
   margin: 7.5px;
 }
 
-.test {
+.grid__el {
   width: 28%;
   display: block;
   margin: 10px;
-  height: 23%;
+  height: 24%;
   border-radius: 26px;
-  background-image: url(../assets/images/affiche_2.jpg);
+  background-image: url(../assets/images/1.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.choose__grid:nth-child(6n) {
-  margin-right: 50px;
+.grid__el:nth-child(6n) {
+  margin-right: 65px;
 }
 
 /* A modif  */

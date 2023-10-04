@@ -21,36 +21,47 @@
 
     <script src="scripts/main.js" defer></script>
 
+
+    <!-- Swiper -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     
 </head>
 <body>
     <main class="main">
         <section class="choose">
-            <h1 class="titre titre--big">Réalisations coup de cœur</h1>
+            <h1 class="titre titre--big">Réalisations <br> coup de cœur</h1>
+            <p class="paragraphe">Découvrez les projets réalisés par les étudiants de la HEAJ durant cette année</p>
 
 
             <?php
+
                 if (isset($data['Project']) && is_array($data['Project'])) {?>
                   
                     <ul class="btn__list">
                         <?php foreach ($data['Project'] as $tab_name) {
                             if (isset($data[$tab_name])) {
                                 $tab_el = $data[$tab_name];?>
-
-                                <li class="btn">
-                                    <?php echo $tab_name ?>
-                                </li><?php
-                            }
-                        }?>
+    
+                                    <li class="btn">
+                                        <?php echo $tab_name ?>
+                                    </li><?php
+                                }
+                            }?>
                     </ul><?php
-                    
+                        
                 }
             ?>
 
         </section>
 
         <section class="choose__grid">
-
+                
 
         </section>
     </main>

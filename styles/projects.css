@@ -1,0 +1,31 @@
+.swiper {
+  height: 100vh;
+}
+
+.swiper .swiper-pagination-bullet {
+  background-color: #2e2e2e;
+  width: 15px;
+  height: 15px;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: var(--swiper-pagination-bullet-vertical-gap, 35px) 0;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical > .swiper-pagination-bullets {
+  right: var(--swiper-pagination-right, 25px);
+}
+
+/* btn avec le blur en bg */
+.btn {
+  padding: 15px 30px;
+  border-radius: 33px;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(7px);
+
+  color: #fff;
+  font-size: 22px;
+}

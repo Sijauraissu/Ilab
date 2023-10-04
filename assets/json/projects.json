@@ -4,7 +4,7 @@
     "Animation",
     "Design Web",
     "Communication graphique",
-    "Dessin",
+    "Illustration",
     "Photographie",
     "Jeux vidéos"
   ],
@@ -12,13 +12,19 @@
   "3D": [
     {
       "nom": "Environement 3D",
-      "image": "https://cdnb.artstation.com/p/assets/images/images/058/613/909/large/carole-demasy-b2a1-tielve-j-envi.jpg?1674575268",
+      "image": "assets/images/1.jpg",
       "etudiant": "Tielve. J"
     },
 
     {
       "nom": "Environement 3D",
-      "image": "https://cdnb.artstation.com/p/assets/images/images/047/054/739/large/carole-demasy-b2a1-cobut-f-archi-int.jpg?1646660626",
+      "image": "assets/images/2.jpg",
+      "etudiant": "Tielve. J"
+    },
+
+    {
+      "nom": "Environement 3D",
+      "image": "assets/images/3.jpg",
       "etudiant": "Cobut. J"
     }
   ],
@@ -26,31 +32,31 @@
   "Animation": [
     {
       "nom": "HOLY",
-      "image": "",
+      "image": "assets/images/4.jpg",
       "video": "https://player.vimeo.com/video/232261037?h=b24248aed0",
       "etudiant": "Kevin Phan Lac"
     },
     {
       "nom": "Immersion",
-      "image": "",
+      "image": "assets/images/4.jpg",
       "video": "https://player.vimeo.com/video/358390731?h=3638909eff",
       "etudiant": "Zinia Scorier, Marie Royer, Mathis Dubrul"
     },
     {
       "nom": "HIGHER",
-      "image": "",
+      "image": "assets/images/1.jpg",
       "video": "https://player.vimeo.com/video/356672406?h=31fef9581d",
       "etudiant": "Suzie Kiehn"
     },
     {
       "nom": "UN ELDORADO",
-      "image": "",
+      "image": "assets/images/4.jpg",
       "video": "https://player.vimeo.com/video/342699369?h=abcf54ce3a",
       " etudiant": "Nicolas Gemoets"
     },
     {
       "nom": "La relève des gardes",
-      "image": "",
+      "image": "assets/images/5.jpg",
       "video": "https://player.vimeo.com/video/489565892?h=de21bb2d67",
       "etudiant": "Anonyme"
     }
@@ -59,19 +65,19 @@
   "Design Web": [
     {
       "nom": "Bostrom",
-      "image": "",
+      "image": "assets/images/2.jpg",
       "etudiant": "Evoroko"
     },
 
     {
       "nom": "No Clip",
-      "image": "",
+      "image": "assets/images/1.jpg",
       "etudiant": "Rafko"
     },
 
     {
       "nom": "",
-      "image": "",
+      "image": "assets/images/2.jpg",
       "etudiant": ""
     }
   ],
@@ -79,14 +85,14 @@
   "Photographie": [
     {
       "nom": "",
-      "image": ""
+      "image": "assets/images/3.jpg"
     }
   ],
 
   "Illustration": [
     {
       "nom": "",
-      "image": ""
+      "image": "assets/images/4.jpg"
     }
   ],
 
@@ -100,7 +106,7 @@
   "Jeux vidéos": [
     {
       "nom": "",
-      "image": ""
+      "image": "assets/images/5.jpg"
     }
   ]
 }
