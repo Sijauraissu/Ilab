@@ -1,55 +1,87 @@
-function getRandomNumber() {
-  return Math.floor(Math.random() * 3) + 1;
+function shuffleArray(inputArray) {
+  return inputArray.sort(() => Math.random() - 0.5);
 }
-
-const nombreAleatoire = getRandomNumber();
-console.log(nombreAleatoire);
 
 let step = 0;
 
 const imageNumber = 12;
 const wrapper = document.querySelector(".choose__grid");
 
+const btnFilter = document.querySelectorAll(".btn");
+let tabProjects = [];
+let tabShuffle = [];
+let currentFilter = null;
+
+function displayRandomProjects() {
+  shuffleArray(tabShuffle);
+
+  wrapper.innerHTML = "";
+
+  for (let i = 0; i < 12 && i < tabShuffle.length; i++) {
+    const project = tabShuffle[i];
+    const imageContainer = document.createElement("a");
+
+    imageContainer.href = "project.php";
+    imageContainer.classList.add("grid__el");
+    imageContainer.style.backgroundImage = `url('${project.image}')`;
+
+    wrapper.append(imageContainer);
+  }
+}
+
 fetch("./assets/json/projects.json")
-  .then((response) => {
-    return response.json();
-  })
+  .then((response) => response.json())
   .then((data) => {
-    const allowedProjects = data["Project"];
-    const keys = Object.keys(data);
+    const listProjects = data["Liste"];
+    shuffleArray(listProjects);
 
-    const btnOptions = document.querySelectorAll(".btn");
-    console.log(btnOptions);
+    tabShuffle = [...listProjects]; //Permet de faire une copie du tableau listProjects
 
-    btnOptions.forEach((btn) => {
-      btn.addEventListener("click", function () {
-        let btnText = btn.innerText;
-
-        console.log(btnText);
-      });
-    });
-
-    let imagestab = [];
-    for (let i = 0; i < keys.length; i++) {
-      const projet = keys[i];
-      if (data.hasOwnProperty(projet) && allowedProjects.includes(projet)) {
-        const tabOptions = data[projet].length;
-        for (let i = 0; i < tabOptions; i++) {
-          let image = data[projet][i].image;
-          if (image) imagestab.push(image);
-          //Ajout en fct du btn à faire
-        }
-      }
-    }
-    console.log(imagestab);
-
-    for (let i = 0; i < imageNumber; i++) {
-      console.log(imagestab[i]);
+    listProjects.forEach((project) => {
       const imageContainer = document.createElement("a");
+
       imageContainer.href = "project.php";
       imageContainer.classList.add("grid__el");
-      imageContainer.style.backgroundImage = `url('${imagestab[i]}')`;
+      imageContainer.style.backgroundImage = `url('${project.image}')`;
+
       wrapper.append(imageContainer);
-      // TODO: add image url
-    }
+
+      tabProjects.push(project);
+    });
+
+    btnFilter.forEach((button) => {
+      const texteBouton = button.textContent.trim();
+
+      button.addEventListener("click", () => {
+        btnFilter.forEach((btn) => {
+          btn.classList.remove("hover");
+        });
+
+        if (currentFilter === texteBouton) {
+          currentFilter = null;
+
+          displayRandomProjects();
+          btn.classList.remove("hover");
+        } else {
+          currentFilter = texteBouton;
+          const filteredProjects = tabProjects.filter((project) => {
+            return project.option === texteBouton;
+          });
+
+          wrapper.innerHTML = "";
+
+          filteredProjects.forEach((project) => {
+            const imageContainer = document.createElement("a");
+
+            imageContainer.href = "project.php";
+            imageContainer.classList.add("grid__el");
+            imageContainer.style.backgroundImage = `url('${project.image}')`;
+
+            wrapper.append(imageContainer);
+          });
+        }
+
+        button.classList.toggle("hover");
+      });
+    });
   });

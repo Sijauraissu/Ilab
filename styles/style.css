@@ -97,3 +97,7 @@ main {
 
   align-content: center;
 }
+
+.hover {
+  background-color: red;
+}

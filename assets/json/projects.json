@@ -9,102 +9,155 @@
     "Jeux vidéos"
   ],
 
-  "3D": [
+  "Liste": [
     {
+      "option": "3D",
       "nom": "Environement 3D",
-      "image": "assets/images/1.jpg",
+      "image": "https://freight.cargo.site/t/original/i/0b1b34b248a09d490cdc6748f653f7cb6c657c74339b7b2f7a589122fe9e65e6/b7e6e190491861.5e188caabbcff.jpg",
       "etudiant": "Tielve. J"
     },
 
     {
+      "option": "3D",
       "nom": "Environement 3D",
-      "image": "assets/images/2.jpg",
+      "image": "https://cdnb.artstation.com/p/assets/images/images/058/613/909/large/carole-demasy-b2a1-tielve-j-envi.jpg?1674575268",
       "etudiant": "Tielve. J"
     },
 
     {
+      "option": "3D",
       "nom": "Environement 3D",
-      "image": "assets/images/3.jpg",
-      "etudiant": "Cobut. J"
-    }
-  ],
+      "image": "https://cdnb.artstation.com/p/assets/images/images/058/613/969/large/carole-demasy-b2a1-vandenbosch-a-envi.jpg?1674575392",
+      "etudiant": "VandenBosch A."
+    },
 
-  "Animation": [
     {
+      "option": "Animation",
       "nom": "HOLY",
-      "image": "assets/images/4.jpg",
+      "image": "https://freight.cargo.site/t/original/i/89581f9e4edbff0fae113e952296d62286c506b87ab66ce63cf80457e6150e0d/ad51fa6f-df7f-4d1b-a789-7e2e28b8dab9.png",
       "video": "https://player.vimeo.com/video/232261037?h=b24248aed0",
       "etudiant": "Kevin Phan Lac"
     },
     {
+      "option": "Animation",
       "nom": "Immersion",
       "image": "assets/images/4.jpg",
       "video": "https://player.vimeo.com/video/358390731?h=3638909eff",
       "etudiant": "Zinia Scorier, Marie Royer, Mathis Dubrul"
     },
     {
+      "option": "Animation",
       "nom": "HIGHER",
       "image": "assets/images/1.jpg",
       "video": "https://player.vimeo.com/video/356672406?h=31fef9581d",
       "etudiant": "Suzie Kiehn"
     },
     {
+      "option": "Animation",
       "nom": "UN ELDORADO",
       "image": "assets/images/4.jpg",
       "video": "https://player.vimeo.com/video/342699369?h=abcf54ce3a",
       " etudiant": "Nicolas Gemoets"
     },
     {
+      "option": "Animation",
       "nom": "La relève des gardes",
       "image": "assets/images/5.jpg",
       "video": "https://player.vimeo.com/video/489565892?h=de21bb2d67",
       "etudiant": "Anonyme"
-    }
-  ],
+    },
 
-  "Design Web": [
     {
+      "option": "Design Web",
       "nom": "Bostrom",
-      "image": "assets/images/2.jpg",
+      "image": "https://freight.cargo.site/t/original/i/f1d5997484985f00e69001079e411218acb050d7365ba91658884284d1d2345b/Cover-cyril-verbois.png",
       "etudiant": "Evoroko"
     },
 
     {
+      "option": "Design Web",
+      "nom": "Freshly",
+      "image": "http://noemie-millaire.be/projets/freshly-bg.png",
+      "etudiant": "Noemie Millaire"
+    },
+
+    {
+      "option": "Design Web",
+      "nom": "Paw Sponsor",
+      "image": "assets/images/2.jpg",
+      "etudiant": "Candice duhoux"
+    },
+
+    {
+      "option": "Design Web",
+      "nom": "JS Jam",
+      "image": "http://noemie-millaire.be/projets/jsjam-bg.png",
+      "etudiant": "Nathan Demasy"
+    },
+
+    {
+      "option": "Design Web",
       "nom": "No Clip",
       "image": "assets/images/1.jpg",
       "etudiant": "Rafko"
     },
 
     {
-      "nom": "",
-      "image": "assets/images/2.jpg",
-      "etudiant": ""
-    }
-  ],
+      "option": "Design Web",
+      "nom": "Dogwise",
+      "image": "https://laureline-delongree.be/projets/tfa/assets/images/st_bernard@2x.png",
+      "etudiant": "Laureline De longrée"
+    },
 
-  "Photographie": [
     {
+      "option": "Photographie",
       "nom": "",
       "image": "assets/images/3.jpg"
-    }
-  ],
+    },
 
-  "Illustration": [
     {
+      "option": "Illustration",
       "nom": "",
       "image": "assets/images/4.jpg"
-    }
-  ],
+    },
 
-  "Communication graphique": [
     {
+      "option": "Communication graphique",
       "nom": "Tribute to Helvetica",
-      "image": "https://freight.cargo.site/t/original/i/ee89b465afd22a23f532246816c54093fc8b52d77f73a7080ffbdfd31530655a/Capture-decran-2022-05-05-a-17.09.33.png"
-    }
-  ],
+      "image": "https://freight.cargo.site/t/original/i/ee89b465afd22a23f532246816c54093fc8b52d77f73a7080ffbdfd31530655a/Capture-decran-2022-05-05-a-17.09.33.png",
+      "etudiant": "Anonyme"
+    },
 
-  "Jeux vidéos": [
     {
+      "option": "Communication graphique",
+      "nom": "Réalisation d’un magazine",
+      "image": "https://freight.cargo.site/t/original/i/156140e5a929777e4fd9f7247c273da8c15861ca97119d4168b185694a207d00/MOCKUP_AFFICHE_01.jpg",
+      "etudiant": "Laura Li Zhang Chaoyue"
+    },
+
+    {
+      "option": "Communication graphique",
+      "nom": "Rebranding du FC Valencee",
+      "image": "https://freight.cargo.site/t/original/i/f1d5997484985f00e69001079e411218acb050d7365ba91658884284d1d2345b/Cover-cyril-verbois.png",
+      "etudiant": "Cyril Verbois"
+    },
+
+    {
+      "option": "Communication graphique",
+      "nom": "Campagne pour aspirateurs",
+      "image": "https://freight.cargo.site/t/original/i/89581f9e4edbff0fae113e952296d62286c506b87ab66ce63cf80457e6150e0d/ad51fa6f-df7f-4d1b-a789-7e2e28b8dab9.png",
+      "etudiant": "Fabian De Smet"
+    },
+
+    {
+      "option": "Communication graphique",
+      "nom": "Réalisation d’un magazine",
+      "image": "https://freight.cargo.site/t/original/i/0b1b34b248a09d490cdc6748f653f7cb6c657c74339b7b2f7a589122fe9e65e6/b7e6e190491861.5e188caabbcff.jpg",
+      "etudiant": "TESS JAUPART"
+    },
+
+    {
+      "option": "Jeux Vidéos",
       "nom": "",
       "image": "assets/images/5.jpg"
     }
