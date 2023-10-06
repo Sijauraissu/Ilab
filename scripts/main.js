@@ -12,21 +12,36 @@ let tabProjects = [];
 let tabShuffle = [];
 let currentFilter = null;
 
-function displayRandomProjects() {
-  shuffleArray(tabShuffle);
-
+function displayProjects(projects) {
   wrapper.innerHTML = "";
 
-  for (let i = 0; i < 12 && i < tabShuffle.length; i++) {
-    const project = tabShuffle[i];
+  for (let i = 0; i < 12 && i < projects.length; i++) {
+    const project = projects[i];
     const imageContainer = document.createElement("a");
 
     imageContainer.href = "project.php";
     imageContainer.classList.add("grid__el");
     imageContainer.style.backgroundImage = `url('${project.image}')`;
-
     wrapper.append(imageContainer);
   }
+}
+
+function applyFilter(filter) {
+  if (filter === currentFilter) {
+    currentFilter = null;
+    displayProjects(tabShuffle);
+  } else {
+    currentFilter = filter;
+    const filteredProjects = tabProjects.filter((project) => {
+      return project.option === filter;
+    });
+    displayProjects(filteredProjects);
+  }
+
+  btnFilter.forEach((button) => {
+    const buttonText = button.textContent.trim();
+    button.classList.toggle("hover", buttonText === currentFilter);
+  });
 }
 
 fetch("./assets/json/projects.json")
@@ -35,53 +50,23 @@ fetch("./assets/json/projects.json")
     const listProjects = data["Liste"];
     shuffleArray(listProjects);
 
-    tabShuffle = [...listProjects]; //Permet de faire une copie du tableau listProjects
+    tabShuffle = [...listProjects]; // Permet de faire une copie du tableau listProjects
 
     listProjects.forEach((project) => {
-      const imageContainer = document.createElement("a");
-
-      imageContainer.href = "project.php";
-      imageContainer.classList.add("grid__el");
-      imageContainer.style.backgroundImage = `url('${project.image}')`;
-
-      wrapper.append(imageContainer);
-
       tabProjects.push(project);
     });
 
     btnFilter.forEach((button) => {
-      const texteBouton = button.textContent.trim();
-
       button.addEventListener("click", () => {
         btnFilter.forEach((btn) => {
           btn.classList.remove("hover");
         });
 
-        if (currentFilter === texteBouton) {
-          currentFilter = null;
-
-          displayRandomProjects();
-          btn.classList.remove("hover");
-        } else {
-          currentFilter = texteBouton;
-          const filteredProjects = tabProjects.filter((project) => {
-            return project.option === texteBouton;
-          });
-
-          wrapper.innerHTML = "";
-
-          filteredProjects.forEach((project) => {
-            const imageContainer = document.createElement("a");
-
-            imageContainer.href = "project.php";
-            imageContainer.classList.add("grid__el");
-            imageContainer.style.backgroundImage = `url('${project.image}')`;
-
-            wrapper.append(imageContainer);
-          });
-        }
-
-        button.classList.toggle("hover");
+        const filterText = button.textContent.trim();
+        applyFilter(filterText);
       });
     });
+
+    // Afficher les projets non filtrés au chargement de la page
+    displayProjects(tabShuffle);
   });
