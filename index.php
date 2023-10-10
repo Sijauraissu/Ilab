@@ -20,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/swiper.js" defer></script>
 
 
     

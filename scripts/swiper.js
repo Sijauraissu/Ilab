@@ -9,3 +9,7 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
 });
+
+window.addEventListener("load", function () {
+  console.log("La page est chargée !");
+});

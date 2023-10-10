@@ -12,7 +12,11 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="scripts/main.js" defer></script>
     <script src="scripts/swiper.js" defer></script>
+
+
 </head>
 <body>
     <!-- Slider main container -->

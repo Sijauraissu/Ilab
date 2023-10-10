@@ -17,7 +17,7 @@ function displayProjects(projects) {
 
   for (let i = 0; i < 12 && i < projects.length; i++) {
     const project = projects[i];
-    const imageContainer = document.createElement("span");
+    const imageContainer = document.createElement("a");
 
     imageContainer.href = "project.php";
     imageContainer.classList.add("grid__el");

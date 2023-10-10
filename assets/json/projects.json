@@ -92,7 +92,21 @@
       "option": "Design Web",
       "nom": "JS Jam",
       "image": "http://noemie-millaire.be/projets/jsjam-bg.png",
-      "etudiant": "Nathan Demasy"
+      "etudiant": "Nathan Demasy",
+
+      "step": [
+        {
+          "Nom de l'étape": "étape 1",
+          "description de l'étape": "description 1"
+        },
+        {
+          "Nom de l'étape": "étape 2",
+          "description de l'étape": "description 2"
+        },
+
+        {},
+        {}
+      ]
     },
 
     {
