@@ -17,11 +17,18 @@ function displayProjects(projects) {
 
   for (let i = 0; i < 12 && i < projects.length; i++) {
     const project = projects[i];
-    const imageContainer = document.createElement("a");
+    const imageContainer = document.createElement("span");
 
     imageContainer.href = "project.php";
     imageContainer.classList.add("grid__el");
     imageContainer.style.backgroundImage = `url('${project.image}')`;
+
+    // Ajoutez un gestionnaire d'événements pour chaque lien créé
+    imageContainer.addEventListener("click", () => {
+      // Écrivez les informations JSON dans la console
+      console.table(project);
+    });
+
     wrapper.append(imageContainer);
   }
 }
@@ -29,7 +36,8 @@ function displayProjects(projects) {
 function applyFilter(filter) {
   if (filter === currentFilter) {
     currentFilter = null;
-    displayProjects(tabShuffle);
+    shuffleArray(tabShuffle); // Réorganiser le tableau tabShuffle
+    displayProjects(tabShuffle.slice(0, imageNumber)); // Afficher les 12 premiers projets aléatoires
   } else {
     currentFilter = filter;
     const filteredProjects = tabProjects.filter((project) => {
@@ -68,5 +76,5 @@ fetch("./assets/json/projects.json")
     });
 
     // Afficher les projets non filtrés au chargement de la page
-    displayProjects(tabShuffle);
+    displayProjects(tabShuffle.slice(0, imageNumber));
   });
