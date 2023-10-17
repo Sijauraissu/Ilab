@@ -101,7 +101,7 @@ if (selectedProject) {
   console.table(selectedProject);
 } else {
   // Gérez le cas où aucune donnée de projet n'a été trouvée
-  console.error(
+  console.log(
     "%cAucune donnée de projet n'a été trouvée dans le localStorage ✅",
     "color: green; font-size: 16px;"
   );

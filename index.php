@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="styles/style.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
     <script src="scripts/main.js" defer></script>
 
@@ -27,7 +27,7 @@
 <body>
     <main class="main">
         <section class="choose">
-            <h1 class="titre titre--big">Réalisations <br> coup de cœur</h1>
+            <h1 class="titre titre--big">Réalisations <br> coup de <span class="titre titre--big titre--color">cœur</span></h1>
             <p class="paragraphe">Découvrez les projets réalisés par les étudiants de la HEAJ durant cette année :</p>
 
 

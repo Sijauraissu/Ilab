@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: articulat-cf, sans-serif;
 }
 
 .swiper {
@@ -35,8 +36,8 @@ body {
   border-radius: 50%;
 
   position: absolute;
-  top: 10%;
-  left: 10%;
+  top: 5%;
+  left: 5%;
 
   display: flex;
   justify-content: center;
@@ -44,10 +45,12 @@ body {
 
   z-index: 1000;
 
-  padding: 15px 30px;
+  padding: 30px 30px;
 
-  color: #fff;
-  font-size: 22px;
+  color: black;
+  font-size: 60px;
+
+  text-decoration: none;
 }
 
 .fullscreen {
@@ -62,13 +65,20 @@ body {
 
 .fullscreen__btn {
   position: relative;
-  top: 90%;
-  left: 90%;
+  top: 80%;
+  left: 50%;
   z-index: 1001;
+  /* bottom: 0%; */
+  /* right: 0%; */
+  color: white;
+  background-color: transparent;
+  padding: 20px;
+  font-size: 32px;
+  border: white 5px solid;
+  border-radius: 24px;
 }
 
 .fullscreenOff {
-  /* display: none; */
   animation: top 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
@@ -80,4 +90,67 @@ body {
   100% {
     transform: translateY(-110%);
   }
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper__container {
+  display: flex;
+  flex-direction: column;
+
+  height: fit-content;
+  width: fit-content;
+
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(7px);
+
+  position: relative;
+  top: 60%;
+  left: calc(100%);
+
+  border-radius: 20px;
+  border: 40px solid transparent;
+}
+
+.swiper__number {
+  font-size: 86px;
+}
+
+.swiper__step {
+  font-size: 46px;
+}
+
+.swiper__description {
+  font-size: 22px;
+  width: 450px;
+
+  line-height: 1.5;
+}
+
+.swiper__name {
+  font-size: 23px;
+}
+
+.swiper__student {
+  font-size: 73px;
+}
+
+.swiper__step,
+.swiper__description,
+.swiper__number,
+.swiper__student,
+.swiper__name {
+  position: relative;
+  /* right: 10%; */
+  font-weight: 800;
+  margin: 0;
+}
+
+.swiper__step,
+.swiper__description,
+.swiper__number {
+  text-align: end;
 }

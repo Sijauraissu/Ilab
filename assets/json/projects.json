@@ -96,20 +96,30 @@
 
       "step": [
         {
-          "stepName": "étape 1",
-          "stepDescript": "J'ai commencé à me renseigner sur des idées qui pourraient me plaire et patati et patata"
+          "stepName": "Interview",
+          "stepDescript": "Pour ce début de projet, je suis parti interviewer des gens de ma classe pour savoir comment je pourrai leur venir en aide.",
+          "fullscreen": "assets/images/interview.jpg"
         },
         {
-          "stepName": "étape 2",
-          "stepDescript": "description 2"
-        },
-
-        {
-          "stepName": "étape 3"
+          "stepName": "Croquis",
+          "stepDescript": "J'ai commencé à me renseigner sur des idées qui pourraient me plaire. A essayer de mettre sur papier ce que pourrait être LE projet de mon année.",
+          "fullscreen": "assets/images/croquis.jpg"
         },
         {
-          "stepName": "étape 4",
-          "stepDescript": "description 4"
+          "stepName": "Wireframe",
+          "stepDescript": "J'ai continué en faisant les wireframes qui sont des croquis mais numériques. J'ai pu ainsi faire tester mon site à ma famille avant de le coder pour de bon",
+          "fullscreen": "assets/images/wireframe.png"
+        },
+        {
+          "stepName": "Code",
+          "stepDescript": "Ma partie préfèrée ! Il faut rentranscrire en code ce qui a été designer. Le projet prends vie pour de bon !",
+          "fullscreen": "assets/images/code.jpg"
+        },
+        {
+          "stepName": "Version finale",
+          "stepDescript": "description 4",
+          "fullscreen": "",
+          "QR": ""
         }
       ]
     },

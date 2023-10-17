@@ -31,6 +31,10 @@ main {
   margin: 0;
 }
 
+.titre--color {
+  color: #ef3325;
+}
+
 .paragraphe {
   margin: 15px 0 45px 0;
 }
