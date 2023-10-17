@@ -74,7 +74,7 @@ main {
 .btn {
   padding: 10px 27px;
   border-radius: 34px;
-  border: 2px solid #2e2e2e;
+  border: 3px solid #2e2e2e;
   margin: 7.5px;
 }
 
@@ -103,5 +103,6 @@ main {
 }
 
 .hover {
-  background-color: red;
+  background-color: #ef3325;
+  color: white;
 }

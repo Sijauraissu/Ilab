@@ -90,7 +90,7 @@
 
     {
       "option": "Design Web",
-      "nom": "JS Jam",
+      "nom": "JS Jam et la marmite perdue !",
       "image": "http://noemie-millaire.be/projets/jsjam-bg.png",
       "etudiant": "Nathan Demasy",
 
@@ -118,8 +118,8 @@
         {
           "stepName": "Version finale",
           "stepDescript": "description 4",
-          "fullscreen": "",
-          "QR": ""
+          "fullscreen": "assets/images/JSJam.png",
+          "QRCode": "demasynathan.be/projets/tfaaout"
         }
       ]
     },

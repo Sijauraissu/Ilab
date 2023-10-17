@@ -61,6 +61,9 @@ body {
   position: absolute;
 
   overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
 }
 
 .fullscreen__btn {
@@ -76,6 +79,9 @@ body {
   font-size: 32px;
   border: white 5px solid;
   border-radius: 24px;
+
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(7px);
 }
 
 .fullscreenOff {
@@ -153,4 +159,21 @@ body {
 .swiper__description,
 .swiper__number {
   text-align: end;
+}
+
+.swiper__name,
+.swiper__student {
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(7px);
+  padding: 20px;
+  width: fit-content;
+  border-radius: 12px;
+
+  left: 0%;
+
+  opacity: 0;
+}
+
+.swiper__student {
+  padding: 20px 10px;
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/xrr4odr.css">
 
     <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/qrcode.css">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -19,9 +20,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- <script src="scripts/main.js" defer></script> -->
+
     <script src="scripts/swiper.js" defer></script>
     <script src="scripts/animation.js" defer></script>
+    <script src="scripts/qrcode.js" defer></script>
+    <!-- Bibliothèque pour le code QR -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
 
 
 </head>
@@ -42,5 +47,6 @@
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
     </div>
+        <div id="qrcode"></div>
 </body>
 </html>

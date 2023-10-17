@@ -22,6 +22,7 @@
     <script src="scripts/main.js" defer></script>
 
 
+
     
 </head>
 <body>
@@ -48,10 +49,8 @@
             ?>
 
         </section>
-
         <section class="choose__grid">
-                
-
+        <!-- <div id="qrcode"></div> -->
         </section>
     </main>
     

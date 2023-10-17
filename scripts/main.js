@@ -26,7 +26,11 @@ if (document.title === "Documents") {
       imageContainer.classList.add("grid__el");
       imageContainer.style.backgroundImage = `url('${project.image}')`;
 
-      // Modifiez le gestionnaire d'événements pour les liens (<a>)
+      //taille aléatoire des images
+      const randomPercentage = 80 + Math.random() * 20;
+      imageContainer.style.transform = `scale(${randomPercentage / 100})`;
+
+      // Modifiez le gestionnaire d'événements pour les liens
       imageContainer.addEventListener("click", (event) => {
         event.preventDefault(); // Empêchez la navigation par défaut
 
@@ -90,6 +94,32 @@ if (document.title === "Documents") {
       // Afficher les projets non filtrés au chargement de la page
       displayProjects(tabShuffle.slice(0, imageNumber));
     });
+
+  const groupes = [
+    { textColor: "#ABD7DE", bgColor: "yellow" },
+    { textColor: "#EF3325", bgColor: "green" },
+    { textColor: "#357E78", bgColor: "white" },
+    { textColor: "#F8C9CA", bgColor: "orange" },
+  ];
+
+  // La variable test contient la longueur de la chaîne de caractères pour laquelle nous voulons générer des paires de couleurs
+
+  // Variable pour stocker les paires de couleurs
+  let test2 = "";
+
+  // Boucle pour générer les paires de couleurs
+  for (let i = 0; i < btnFilter.length; i++) {
+    // Sélection aléatoire d'un groupe
+    const groupeAleatoire = groupes[Math.floor(Math.random() * groupes.length)];
+
+    // Ajout des couleurs de texte et de fond à la variable test2
+    test2 += `Texte: ${groupeAleatoire.textColor}, Fond: ${groupeAleatoire.bgColor}\n`;
+
+    btnFilter[i].style.borderColor = groupeAleatoire.textColor;
+  }
+
+  // Affichage du résultat
+  console.log(test2);
 }
 
 // Récupérez les données du projet depuis le localStorage
