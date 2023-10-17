@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Documents</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/xrr4odr.css">
 
@@ -20,7 +20,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/swiper.js" defer></script>
 
 
     

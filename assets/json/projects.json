@@ -104,8 +104,14 @@
           "description de l'étape": "description 2"
         },
 
-        {},
-        {}
+        {
+          "Nom de l'étape": "étape 2",
+          "description de l'étape": "description 2"
+        },
+        {
+          "Nom de l'étape": "étape 2",
+          "description de l'étape": "description 2"
+        }
       ]
     },
 

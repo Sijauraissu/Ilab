@@ -13,26 +13,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-    <script src="scripts/main.js" defer></script>
+    <!-- <script src="scripts/main.js" defer></script> -->
     <script src="scripts/swiper.js" defer></script>
 
 
 </head>
 <body>
+   <a class="backBtn" href="index.php">x</a>
     <!-- Slider main container -->
     <div class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-        <!-- Slides -->
-            <div class="swiper-slide">
-
-            </div>
-            <div class="swiper-slide">
-
-            </div>
-            <div class="swiper-slide">
-
-            </div>
+        
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
