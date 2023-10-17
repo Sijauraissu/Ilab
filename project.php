@@ -18,6 +18,12 @@
 
 
 </head>
+
+    
+<div class="fullscreen">
+    <button class="fullscreen__btn">Bouton</button>
+</div>
+    
 <body>
    <a class="backBtn" href="index.php">x</a>
     <!-- Slider main container -->
