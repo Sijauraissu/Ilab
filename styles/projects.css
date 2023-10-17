@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .swiper {
   height: 100vh;
 }
@@ -19,22 +25,13 @@
 }
 
 /* btn avec le blur en bg */
-.btn {
-  padding: 15px 30px;
-  border-radius: 33px;
-  border: 2px solid #fff;
-  background: rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(7px);
-
-  color: #fff;
-  font-size: 22px;
-}
 
 .backBtn {
   height: 32px;
   width: 32px;
-  background-color: red;
-  border: 2px solid transparent;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(7px);
+  border: 2px solid #fff;
   border-radius: 50%;
 
   position: absolute;
@@ -46,4 +43,41 @@
   align-items: center;
 
   z-index: 1000;
+
+  padding: 15px 30px;
+
+  color: #fff;
+  font-size: 22px;
+}
+
+.fullscreen {
+  z-index: 800;
+  background-color: red;
+  width: 100svw;
+  height: 100svh;
+  position: absolute;
+
+  overflow: hidden;
+}
+
+.fullscreen__btn {
+  position: relative;
+  top: 90%;
+  left: 90%;
+  z-index: 1001;
+}
+
+.fullscreenOff {
+  /* display: none; */
+  animation: top 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes top {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-110%);
+  }
 }

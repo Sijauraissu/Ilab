@@ -96,21 +96,20 @@
 
       "step": [
         {
-          "Nom de l'étape": "étape 1",
-          "description de l'étape": "description 1"
+          "stepName": "étape 1",
+          "stepDescript": "J'ai commencé à me renseigner sur des idées qui pourraient me plaire et patati et patata"
         },
         {
-          "Nom de l'étape": "étape 2",
-          "description de l'étape": "description 2"
+          "stepName": "étape 2",
+          "stepDescript": "description 2"
         },
 
         {
-          "Nom de l'étape": "étape 2",
-          "description de l'étape": "description 2"
+          "stepName": "étape 3"
         },
         {
-          "Nom de l'étape": "étape 2",
-          "description de l'étape": "description 2"
+          "stepName": "étape 4",
+          "stepDescript": "description 4"
         }
       ]
     },

@@ -3,7 +3,6 @@ function shuffleArray(inputArray) {
 }
 
 if (document.title === "Documents") {
-  let step = 0;
   const imageNumber = 12;
 
   const wrapper = document.querySelector(".choose__grid");
@@ -103,6 +102,7 @@ if (selectedProject) {
 } else {
   // Gérez le cas où aucune donnée de projet n'a été trouvée
   console.error(
-    "Aucune donnée de projet n'a été trouvée dans le localStorage."
+    "%cAucune donnée de projet n'a été trouvée dans le localStorage ✅",
+    "color: green; font-size: 16px;"
   );
 }

@@ -1,7 +1,7 @@
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "vertical",
-  loop: true,
+  loop: false,
 
   // If we need pagination
   pagination: {
@@ -35,27 +35,36 @@ rollBack.addEventListener("click", function () {
 document.body.appendChild(rollBack);
 /////////////////////////////////
 
-let selectedProjectInfos = [
-  selectedProject.option,
-  selectedProject.nom,
-  selectedProject.image,
-  selectedProject.video,
-  selectedProject.etudiant,
-  selectedProject.step,
-];
-
 const wrapperSwiper = document.querySelector(".swiper-wrapper");
 
-let infoContainer = null;
-
-console.table(selectedProjectInfos);
-
 for (let i = 0; i < selectedProject.step.length; i++) {
-  console.log(selectedProject.step[i]);
-
-  infoContainer = document.createElement("div");
+  let infoContainer = document.createElement("div");
   infoContainer.classList.add("swiper-slide");
-  infoContainer.innerHTML = "test";
+
+  let infoName = document.createElement("h2");
+  infoName.textContent = selectedProject.step[i].stepName;
+
+  let infoStep = document.createElement("h3");
+  infoStep.textContent = selectedProject.step[i].stepDescript;
+
+  infoContainer.appendChild(infoName);
+  infoContainer.appendChild(infoStep);
 
   wrapperSwiper.append(infoContainer);
 }
+
+let infoContainers = document.querySelectorAll(".swiper-slide");
+console.log(infoContainers);
+
+for (let i = 0; i < infoContainers.length; i++) {
+  const element = infoContainers[i];
+}
+//////
+
+const fullscreen = document.querySelector(".fullscreen");
+const fullscreenBtn = document.querySelector(".fullscreen__btn");
+
+fullscreenBtn.addEventListener("click", (event) => {
+  fullscreen.classList.add("fullscreenOff");
+  console.log("click");
+});
