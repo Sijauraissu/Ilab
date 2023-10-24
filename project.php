@@ -32,9 +32,9 @@
 </head>
 
     
-<div class="fullscreen">
+<!-- <div class="fullscreen">
     <button class="fullscreen__btn">Découvrir les étapes du projet !</button>
-</div>
+</div> -->
     
 <body>
    <a class="backBtn" href="index.php">x</a>

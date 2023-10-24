@@ -11,6 +11,12 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+
+  background-image: url(../assets/images/gradient.svg);
+  background-repeat: none;
+  background-size: cover;
+
+  color: white;
 }
 
 main {
