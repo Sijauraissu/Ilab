@@ -1,3 +1,4 @@
+// Création du Slider
 const swiper = new Swiper(".swiper", {
   direction: "vertical",
   loop: false,
@@ -8,51 +9,27 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
     // https://swiperjs.com/swiper-api
   },
+
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 30,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
 });
 
-swiper.on("slideChangeTransitionEnd", function () {
-  const textAnim =
-    swiper.slides[swiper.activeIndex].querySelectorAll(".textAnimation");
-  const step = swiper.slides[swiper.activeIndex].querySelector(".swiper__step");
-  const number =
-    swiper.slides[swiper.activeIndex].querySelector(".swiper__number");
-  const description = swiper.slides[swiper.activeIndex].querySelector(
-    ".swiper__description"
-  );
+// Création du bouton de retour en arrière
+const rollBack = document.querySelector(".backBtn");
 
-  gsap.from(step, {
-    x: 600,
-    opacity: 0,
-    duration: 1,
-    ease: Power2.ease,
-  });
-
-  gsap.from(number, {
-    x: 600, // Faites apparaître depuis la droite
-    opacity: 0,
-    duration: 1,
-    ease: Power2.ease,
-    delay: 0.2, // Ajoutez un délai de 0.2 seconde
-  });
-
-  gsap.from(description, {
-    x: 600, // Faites apparaître depuis la droite
-    opacity: 0,
-    duration: 1,
-    ease: Power2.ease,
-    delay: 0.4, // Ajoutez un délai de 0.4 seconde
-  });
-
-  textAnim.forEach((el, index) => {
-    gsap.to(el, {
-      opacity: 0.8,
-      x: -600,
-      duration: 1,
-      ease: Power2.ease,
-      delay: 0.2 * index,
-    });
-  });
+// Ajoutez un gestionnaire d'événements "click" au bouton
+rollBack.addEventListener("click", function () {
+  localStorage.clear();
 });
+
+//
+document.body.appendChild(rollBack);
 
 // Récupérez les données du projet depuis le localStorage
 const selectedProject = JSON.parse(localStorage.getItem("selectedProject"));
@@ -68,58 +45,54 @@ if (selectedProject) {
   );
 }
 
-const rollBack = document.querySelector(".backBtn");
+// Créez une animation GSAP pour l'élément "projetinfos"
+const projectInfo = document.querySelector(".projetinfos");
+projectInfo.classList.add("project-info-animation");
 
-// Ajoutez un gestionnaire d'événements "click" au bouton
-rollBack.addEventListener("click", function () {
-  localStorage.clear();
+const projectInfoTween = gsap.to(".project-info-animation", {
+  y: "0%", // Déplace l'élément vers le haut de la page
+  ease: "power3.inOut",
+  paused: true, // En pause au départ
 });
 
-// Ajoutez le bouton à la page (par exemple, au corps du document)
-document.body.appendChild(rollBack);
 /////////////////////////////////
+
+let fullscreen = document.querySelector(".fullscreen");
+
+if (selectedProject.finalproject[0].format == "video") {
+  console.log("C'est une video");
+  let videowrapper = document.createElement("video");
+  videowrapper.src = selectedProject.finalproject[0].element;
+  videowrapper.classList.add("video");
+  fullscreen.append(videowrapper);
+} else if (selectedProject.finalproject[0].format == "image") {
+  console.log("C'est une image");
+  fullscreen.style.backgroundImage = `url('${selectedProject.finalproject[0].element}')`;
+}
+
+//
+//
+//
+
 const wrapperSwiper = document.querySelector(".swiper-wrapper");
 
 for (let i = 0; i < selectedProject.step.length; i++) {
+  // Création d'une slide qui va contenir toutes les infos
   let swiperContainer = document.createElement("div");
+  // Ajout de la classe sur la slide
   swiperContainer.classList.add("swiper-slide");
-  swiperContainer.style.backgroundImage = `url('${selectedProject.step[i].fullscreen}')`;
 
-  let test = swiperContainer;
+  // Création d'une div qui va contenir l'image de la slide
+  let imageContainer = document.createElement("div");
+  // Ajout de la classe sur la div de l'image
+  imageContainer.classList.add("swiper-image", "slide-animation");
 
-  let infoContainer = document.createElement("div");
-  infoContainer.classList.add("swiper__container", "textAnimation");
+  // Ajout de l'image récupérée dans le local storage
+  imageContainer.style.backgroundImage = `url('${selectedProject.step[i].fullscreen}')`;
 
-  let infoName = document.createElement("p");
-  infoName.textContent = selectedProject.step[i].stepName;
-  infoName.classList.add("swiper__step");
-
-  let infoDescript = document.createElement("p");
-  infoDescript.textContent = selectedProject.step[i].stepDescript;
-  infoDescript.classList.add("swiper__description");
-
-  let infoStep = document.createElement("p");
-  infoStep.textContent = i + 1 + ".";
-  infoStep.classList.add("swiper__number");
-
-  swiperContainer.appendChild(infoContainer);
-
-  infoContainer.appendChild(infoStep);
-  infoContainer.appendChild(infoName);
-  infoContainer.appendChild(infoDescript);
-
-  // Ajoutez infoStudentName et infoProject uniquement à la première diapositive
-  if (i === 0) {
-    let infoStudentName = document.createElement("p");
-    infoStudentName.textContent = selectedProject.etudiant;
-    infoStudentName.classList.add("swiper__student");
-    swiperContainer.appendChild(infoStudentName);
-
-    let infoProject = document.createElement("p");
-    infoProject.textContent = selectedProject.nom;
-    infoProject.classList.add("swiper__name");
-    swiperContainer.appendChild(infoProject);
-  }
+  // Ajout de la div contenant l'image à la slide
+  swiperContainer.appendChild(imageContainer);
+  //
 
   wrapperSwiper.append(swiperContainer);
 }
@@ -127,73 +100,180 @@ for (let i = 0; i < selectedProject.step.length; i++) {
 let infoContainers = document.querySelectorAll(".swiper-slide");
 console.log(infoContainers);
 
-for (let i = 0; i < infoContainers.length; i++) {
-  const element = infoContainers[i];
+// Fct pour changer les infos du code en fonction de la position de la slide
+const infoStep = document.querySelector(".projetinfos__stepnumber");
+const infoName = document.querySelector(".projetinfos__stepname");
+const infoDescript = document.querySelector(".projetinfos__stepdescript");
+
+const nameartist = document.querySelector(".projetinfos__nameartist");
+const nameproject = document.querySelector(".projetinfos__nameproject");
+
+const indexContainer = document.querySelector(".projetinfos");
+const swiperImage = document.querySelectorAll(".swiper-image");
+// const noScroll = document.querySelector(".noScroll");
+const swiperImageCount = swiperImage.length - 1;
+let test = 0;
+
+function updateInfo(activeSlideIndex, activeSlideData) {
+  gsap.to([infoStep, infoName, infoDescript], {
+    opacity: 0,
+    duration: 0.3,
+    onComplete: () => {
+      infoStep.textContent =
+        activeSlideIndex === swiperImage.length ? "" : activeSlideIndex + "."; // Terciaire
+      infoName.textContent = activeSlideData.stepName;
+      infoDescript.textContent = activeSlideData.stepDescript;
+
+      gsap.to([infoStep, infoName, infoDescript], {
+        opacity: 1,
+        duration: 0.3,
+      });
+    },
+  });
 }
-//////
 
-// const fullscreen = document.querySelector(".fullscreen");
-// const fullscreenBtn = document.querySelector(".fullscreen__btn");
+window.onload = function () {
+  var QrCodeApparition = document.querySelector(".qrcode");
+  console.log(QrCodeApparition);
 
-// const studentName = document.querySelector(".swiper__student");
-// const projectName = document.querySelector(".swiper__name");
+  // Création d'une fonction lors du changement de slide du slider
+  swiper.on("slideChange", function () {
+    // On récupère l'index de la slide active
+    const activeSlideIndex = swiper.activeIndex;
+    const infoStepNumber = activeSlideIndex - 1;
+    // On fait une condition pour vérifier qu'on ne se trouve pas sur la première slide (index 0)
+    if (activeSlideIndex > 0) {
+      // On stock les données du tableau dans une constante en fonction du la longueur du tableau step dans le JSON.
+      const activeSlideData = selectedProject.step[infoStepNumber];
+      // const activeSlidePersonnalData = selectedProject;
 
-// fullscreen.style.backgroundImage = `url('${selectedProject.image}')`;
+      // // On met la donnée de la step dans l'html. Elle est égale à la position de l'index
+      // if (activeSlideIndex == swiperImage.length) {
+      //   infoStep.style.opacity = "0";
+      // } else {
+      //   infoStep.style.opacity = "1";
+      // }
+      // infoStep.textContent = activeSlideIndex + ".";
 
-// fullscreenBtn.addEventListener("click", () => {
-//   // Lancer l'animation de la première diapositive avec un délai
-//   setTimeout(() => {
-//     const firstSlideTextAnim =
-//       swiper.slides[0].querySelectorAll(".textAnimation");
+      // // On met la valeur du nom de l'étape dans l'html
+      // infoName.textContent = activeSlideData.stepName;
+      // //On met la valeur du nom de la description dans l'html
+      // infoDescript.textContent = activeSlideData.stepDescript;
 
-//     const step = swiper.slides[0].querySelector(".swiper__step");
-//     const number = swiper.slides[0].querySelector(".swiper__number");
-//     const description = swiper.slides[0].querySelector(".swiper__description");
+      updateInfo(activeSlideIndex, activeSlideData);
 
-//     gsap.from(step, {
-//       x: 600, // Faites apparaître depuis la droite
-//       opacity: 0,
-//       duration: 1,
-//       ease: Power2.ease,
-//     });
+      //
+      nameartist.textContent = selectedProject.etudiant;
+      //
+      nameproject.textContent = selectedProject.nom;
 
-//     gsap.from(number, {
-//       x: 600, // Faites apparaître depuis la droite
-//       opacity: 0,
-//       duration: 1,
-//       ease: Power2.ease,
-//       delay: 0.2, // Ajoutez un délai de 0.2 seconde
-//     });
+      projectInfo.style.position = "absolute";
+      projectInfoTween.play();
+    } else {
+      projectInfo.style.position = "fixed";
+      projectInfoTween.reverse();
+    }
+    const tl = gsap.timeline();
 
-//     gsap.from(description, {
-//       x: 600, // Faites apparaître depuis la droite
-//       opacity: 0,
-//       duration: 1,
-//       ease: Power2.ease,
-//       delay: 0.4, // Ajoutez un délai de 0.4 seconde
-//     });
+    if (swiper.isEnd) {
+      console.log(test);
 
-//     //////
-//     firstSlideTextAnim.forEach((el, index) => {
-//       gsap.to(el, {
-//         opacity: 1,
-//         x: -600,
-//         duration: 1,
-//         ease: Power2.ease,
-//         delay: 0.2 * index,
-//       });
-//     });
+      indexContainer.style.zIndex = "-1";
+      swiperImage[swiperImageCount].style.outline = "50px none black";
+      tl.to(".projetinfos__artist, .projetinfos__stepcontainer", {
+        // height: 800,
+        duration: 1,
+        ease: "power2.inOut",
+        css: { "align-items": "flex-start", height: 800 },
+        onComplete: () => {
+          console.log("Animation terminée et je suis joie !");
+        },
+      });
+      tl.to(
+        ".projetinfos",
+        {
+          duration: 1,
+          ease: "power2.inOut",
+          bottom: 600,
+          onComplete: () => {
+            console.log("Animation terminée !");
+          },
+        },
+        0
+      );
+      tl.to(
+        ".qrcode",
+        {
+          duration: 0.5,
+          ease: "power2.inOut",
+          display: "flex",
+          opacity: 1,
+          onComplete: () => {
+            console.log("Animation terminée !");
+          },
+        },
+        0
+      );
+      // noScroll.style.overflow = "auto";
+      console.log(QrCodeApparition);
+      // QrCodeApparition.style.display = "flex";
+      test = 1;
+      console.log(test);
+      // //
+      // //
+    } else if (test === 1) {
+      test = 0;
+      //
+      //
+      console.log(test);
+      indexContainer.style.zIndex = "10000000000";
+      swiperImage[swiperImageCount - 1].style.outline = "50px solid black";
 
-//     gsap.to(".swiper__student, .swiper__name", {
-//       opacity: 1,
-//       duration: 1,
-//       stagger: 0.5,
-//       x: 100,
-//       ease: Power2.ease,
-//       delay: 0.2,
-//     });
-//   }, 500);
+      console.log("pas dernière slide");
+      QrCodeApparition.style.display = "none";
 
-//   fullscreen.classList.add("fullscreenOff");
-//   console.log("click");
-// });
+      const reverseTl = gsap.timeline(); // Créez une nouvelle timeline pour l'inversion
+
+      reverseTl.to(".qrcode", {
+        duration: 0.4,
+        ease: "power2.inOut",
+        opacity: 0,
+        display: "none",
+        onComplete: () => {
+          console.log("Animation terminée !");
+        },
+      });
+
+      reverseTl.to(
+        ".projetinfos__artist, .projetinfos__stepcontainer",
+        {
+          // height: 200, // Inverse la hauteur
+          duration: 0.4,
+          ease: "power2.inOut",
+          css: { "align-items": "center", height: 200 },
+          onComplete: () => {
+            console.log("Animation inversée terminée !");
+          },
+        },
+        0
+      );
+
+      reverseTl.to(
+        ".projetinfos",
+        {
+          duration: 0.4,
+          ease: "power2.inOut",
+          bottom: 0, // Inverse la position
+          onComplete: () => {
+            console.log("Animation inversée terminée !");
+          },
+        },
+        0
+      );
+
+      tl.add(reverseTl);
+
+      console.log(test);
+    }
+  });
+};

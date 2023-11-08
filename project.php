@@ -32,21 +32,37 @@
 </head>
 
     
-<!-- <div class="fullscreen">
-    <button class="fullscreen__btn">Découvrir les étapes du projet !</button>
-</div> -->
-    
-<body>
-   <a class="backBtn" href="index.php">x</a>
-    <!-- Slider main container -->
-    <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-        
+<body class="noScroll">
+    <main class="projetmain">
+        <div class="projetinfos">
+            <div class="projetinfos__artist">
+                <p class="projetinfos__nameproject"></p>
+                <p class="projetinfos__nameartist"></p>
+            </div>
+
+            <div class="projetinfos__stepcontainer">
+                <p class="projetinfos__stepnumber"></p>
+                <div class="projetinfos__stepinfos">
+                    <p class="projetinfos__stepname"></p>
+                    <p class="projetinfos__stepdescript"></p>
+                </div>
+
+            </div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
+        <a class="backBtn" href="index.php"></a>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="fullscreen"></div>
+                </div>
+        
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
         <div id="qrcode"></div>
+    </main>
 </body>
 </html>

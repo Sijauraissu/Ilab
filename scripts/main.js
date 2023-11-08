@@ -11,13 +11,14 @@ let tabShuffle = [];
 
 let currentFilter = null;
 let project = null;
-let imageContainer = null;
+var imageContainer = null;
 
 function displayProjects(projects) {
   wrapper.innerHTML = "";
 
-  for (let i = 0; i < 12 && i < projects.length; i++) {
+  for (let i = 0; i < imageNumber && i < projects.length; i++) {
     project = projects[i];
+    console.log(projects);
     imageContainer = document.createElement("a");
 
     imageContainer.href = "project.php";
@@ -64,15 +65,18 @@ function applyFilter(filter) {
   });
 }
 
+var listProjects = null;
 // À l'intérieur de la fonction fetch
 fetch("./assets/json/projects.json")
   .then((response) => response.json())
   .then((data) => {
-    const listProjects = data["Liste"];
-    shuffleArray(listProjects);
+    listProjects = data["Liste"];
     console.log(listProjects);
+    // shuffleArray(listProjects);
 
     tabShuffle = [...listProjects]; // Permet de faire une copie du tableau listProjects
+    console.log(tabShuffle);
+    console.log(listProjects);
 
     listProjects.forEach((project) => {
       tabProjects.push(project);
@@ -91,6 +95,8 @@ fetch("./assets/json/projects.json")
 
     // Afficher les projets non filtrés au chargement de la page
     displayProjects(tabShuffle.slice(0, imageNumber));
+
+    executeAfterCardsLoaded();
   });
 
 const groupes = [
@@ -103,7 +109,7 @@ const groupes = [
 // La variable test contient la longueur de la chaîne de caractères pour laquelle nous voulons générer des paires de couleurs
 
 // Variable pour stocker les paires de couleurs
-let test2 = "";
+let colorChanger = "";
 
 // Boucle pour générer les paires de couleurs
 for (let i = 0; i < btnFilter.length; i++) {
@@ -111,13 +117,13 @@ for (let i = 0; i < btnFilter.length; i++) {
   const groupeAleatoire = groupes[Math.floor(Math.random() * groupes.length)];
 
   // Ajout des couleurs de texte et de fond à la variable test2
-  test2 += `Texte: ${groupeAleatoire.textColor}, Fond: ${groupeAleatoire.bgColor}\n`;
+  colorChanger += `Texte: ${groupeAleatoire.textColor}, Fond: ${groupeAleatoire.bgColor}\n`;
 
   btnFilter[i].style.borderColor = groupeAleatoire.textColor;
 }
 
 // Affichage du résultat
-console.log(test2);
+console.log(colorChanger);
 
 // Récupérez les données du projet depuis le localStorage
 const selectedProject = JSON.parse(localStorage.getItem("selectedProject"));
@@ -130,6 +136,64 @@ if (selectedProject) {
   // Gérez le cas où aucune donnée de projet n'a été trouvée
   console.log(
     "%cAucune donnée de projet n'a été trouvée dans le localStorage ✅",
+    "color: green; font-size: 16px;"
+  );
+}
+//
+//
+
+//  ALEATOIRE DE SES MORTS
+function executeAfterCardsLoaded() {
+  const cartes = document.querySelectorAll(".grid__el");
+  console.log(cartes);
+  const nombreDeCartes = cartes.length;
+  console.log(nombreDeCartes);
+
+  const tl = gsap.timeline(); // Crée une timeline GSAP pour gérer les animations
+
+  const duration = 1; // Durée de l'animation en secondes
+
+  // Première animation GSAP pour toutes les cartes sélectionnées avec rotation
+  tl.to(cartes, {
+    duration: duration,
+    scale: 0.2,
+    opacity: 0,
+    transformOrigin: "center center",
+    rotation: 180, // Ajout de l'effet de rotation (360 degrés)
+    stagger: 0.1, // Délai entre le début de chaque animation
+    onComplete: () => {
+      // Réorganisez le tableau listProjects
+      shuffleArray(listProjects);
+
+      // Affiche à nouveau les 12 premiers projets du tableau listProjects mélangé
+      displayProjects(listProjects.slice(0, imageNumber));
+
+      // Lancer la deuxième animation GSAP après que les projets soient chargés
+      launchSecondAnimation();
+    },
+  });
+
+  // Fonction pour lancer la deuxième animation GSAP
+  function launchSecondAnimation() {
+    const tl2 = gsap.timeline(); // Crée une nouvelle timeline pour la deuxième animation
+    tl2.to(cartes, {
+      duration: duration,
+      scale: 1,
+      opacity: 1,
+      transformOrigin: "center center",
+      rotation: 0, // Rotation inverse pour réinitialiser la rotation
+      onComplete: () => {
+        // Applique une taille aléatoire pour les projets qui subissent la deuxième animation
+        cartes.forEach((carte) => {
+          const randomPercentage = 80 + Math.random() * 20;
+          carte.style.transform = `scale(${randomPercentage / 100})`;
+        });
+      },
+    });
+  }
+
+  console.log(
+    "%cLe fichier contenant les animations se charge bien ! ✅",
     "color: green; font-size: 16px;"
   );
 }

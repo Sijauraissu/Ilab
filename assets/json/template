@@ -1,0 +1,47 @@
+{
+  "Project": [
+    "3D",
+    "Animation",
+    "Design Web",
+    "Communication graphique",
+    "Illustration",
+    "Photographie",
+    "Jeux vidéos"
+  ],
+  "Liste": [
+    {
+      "option": "*Nom de l'option*",
+      "nom": "*Nom du projet*",
+      "image": "*Lien vers l'image de couverture*",
+      "etudiant": "*Nom de l'étudiant*",
+      "finalproject": [
+        {
+          "format": "*image* / *video*",
+          "element": "*lien vers l'image/la vidéo du projet final*"
+        }
+      ],
+      "step": [
+        {
+          "stepName": "*Nom de l'étape 1*",
+          "stepDescript": "*Petite description de l'étape*",
+          "fullscreen": "*Lien vers l'image d'illustration*"
+        },
+        {
+          "stepName": "*Nom de l'étape 2*",
+          "stepDescript": "*Petite description de l'étape*",
+          "fullscreen": "*Lien vers l'image d'illustration*"
+        },
+        {
+          "stepName": "...",
+          "stepDescript": "...",
+          "fullscreen": "..."
+        },
+        {
+          "stepName": "**",
+          "stepDescript": "*Description plus longue et plus approfondie*",
+          "QRCode": "*lien vers le portfolio / vers le projet*"
+        }
+      ]
+    }
+  ]
+}

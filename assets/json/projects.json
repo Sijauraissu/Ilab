@@ -13,14 +13,14 @@
     {
       "option": "3D",
       "nom": "Environement 3D",
-      "image": "https://freight.cargo.site/t/original/i/0b1b34b248a09d490cdc6748f653f7cb6c657c74339b7b2f7a589122fe9e65e6/b7e6e190491861.5e188caabbcff.jpg",
+      "image": "https://julie-corbeel.be/projets/dataplay/assets/images/qst0.png",
       "etudiant": "Tielve. J"
     },
 
     {
       "option": "3D",
       "nom": "Environement 3D",
-      "image": "https://cdnb.artstation.com/p/assets/images/images/058/613/909/large/carole-demasy-b2a1-tielve-j-envi.jpg?1674575268",
+      "image": "https://cdn.discordapp.com/attachments/900294131916615770/969770238478540890/tournay.png",
       "etudiant": "Tielve. J"
     },
 
@@ -34,29 +34,25 @@
     {
       "option": "Animation",
       "nom": "HOLY",
-      "image": "https://freight.cargo.site/t/original/i/89581f9e4edbff0fae113e952296d62286c506b87ab66ce63cf80457e6150e0d/ad51fa6f-df7f-4d1b-a789-7e2e28b8dab9.png",
-      "video": "https://player.vimeo.com/video/232261037?h=b24248aed0",
+      "image": "https://cdn.discordapp.com/attachments/900294131916615770/969770238772117584/bourgaux.png",
       "etudiant": "Kevin Phan Lac"
     },
     {
       "option": "Animation",
       "nom": "Immersion",
-      "image": "assets/images/4.jpg",
-      "video": "https://player.vimeo.com/video/358390731?h=3638909eff",
+      "image": "assets/images/3D_1.jpg",
       "etudiant": "Zinia Scorier, Marie Royer, Mathis Dubrul"
     },
     {
       "option": "Animation",
       "nom": "HIGHER",
-      "image": "assets/images/1.jpg",
-      "video": "https://player.vimeo.com/video/356672406?h=31fef9581d",
+      "image": "https://www.f3df.com/wp-content/uploads/2014/09/choisir-un-logiciel-de-mod%C3%A9lisation-3D.jpg",
       "etudiant": "Suzie Kiehn"
     },
     {
       "option": "Animation",
       "nom": "UN ELDORADO",
-      "image": "assets/images/4.jpg",
-      "video": "https://player.vimeo.com/video/342699369?h=abcf54ce3a",
+      "image": "https://i.pinimg.com/originals/6e/75/b7/6e75b77fb2e58668161e48de0a0fc6c3.png",
       " etudiant": "Nicolas Gemoets"
     },
     {
@@ -70,7 +66,7 @@
     {
       "option": "Design Web",
       "nom": "Bostrom",
-      "image": "https://freight.cargo.site/t/original/i/f1d5997484985f00e69001079e411218acb050d7365ba91658884284d1d2345b/Cover-cyril-verbois.png",
+      "image": "https://cdn.discordapp.com/attachments/900294131916615770/969770239103488050/marchal_but_better.png",
       "etudiant": "Evoroko"
     },
 
@@ -90,9 +86,16 @@
 
     {
       "option": "Design Web",
-      "nom": "JS Jam et la marmite perdue !",
+      "nom": "JS Jam",
       "image": "assets/images/JsJamminia.png",
       "etudiant": "Nathan Demasy",
+
+      "finalproject": [
+        {
+          "format": "image",
+          "element": "assets/images/JsJamminia.png"
+        }
+      ],
 
       "step": [
         {
@@ -107,7 +110,7 @@
         },
         {
           "stepName": "Wireframe",
-          "stepDescript": "J'ai continué en faisant les wireframes qui sont des croquis mais numériques. J'ai pu ainsi faire tester mon site à ma famille avant de le coder pour de bon",
+          "stepDescript": "J'ai continué en faisant les wireframes qui sont des croquis mais numériques. J'ai pu ainsi faire tester mon site à ma famille avant de le coder pour de bon.",
           "fullscreen": "assets/images/wireframe.png"
         },
         {
@@ -117,9 +120,13 @@
         },
         {
           "stepName": "Version finale",
-          "stepDescript": "description 4",
-          "fullscreen": "assets/images/JSJam.png",
-          "QRCode": "demasynathan.be/projets/tfaaout"
+          "stepDescript": "description 5",
+          "fullscreen": "assets/images/JSJam.png"
+        },
+        {
+          "stepName": "JS JAM",
+          "stepDescript": "Ce projet est l'aboutissement du travail de toute mon année. Il démontre tout ce que j'ai appris, tout ce que je sais faire. Je suis fier de l'avoir rendu. ",
+          "QRCode": "https://demasynathan.be/"
         }
       ]
     },
@@ -127,21 +134,21 @@
     {
       "option": "Design Web",
       "nom": "No Clip",
-      "image": "assets/images/1.jpg",
+      "image": "https://cdn.discordapp.com/attachments/900294131916615770/969770239682285608/thronte.png",
       "etudiant": "Rafko"
     },
 
     {
       "option": "Design Web",
       "nom": "Dogwise",
-      "image": "https://laureline-delongree.be/projets/tfa/assets/images/st_bernard@2x.png",
+      "image": "assets/images/Dogwise.png",
       "etudiant": "Laureline De longrée"
     },
 
     {
       "option": "Photographie",
-      "nom": "",
-      "image": "assets/images/3.jpg"
+      "nom": "*Nom du projet*",
+      "image": "https://cdn.discordapp.com/attachments/900294131916615770/969770239443230730/terranova.png"
     },
 
     {
@@ -183,12 +190,6 @@
       "nom": "Réalisation d’un magazine",
       "image": "https://freight.cargo.site/t/original/i/0b1b34b248a09d490cdc6748f653f7cb6c657c74339b7b2f7a589122fe9e65e6/b7e6e190491861.5e188caabbcff.jpg",
       "etudiant": "TESS JAUPART"
-    },
-
-    {
-      "option": "Jeux Vidéos",
-      "nom": "",
-      "image": "assets/images/5.jpg"
     }
   ]
 }

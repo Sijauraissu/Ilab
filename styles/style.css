@@ -4,7 +4,8 @@
   font-style: normal;
   line-height: 1.4;
   font-size: 22px;
-  color: #2e2e2e;
+  color: #eae5e5;
+  background: #050505;
 }
 
 body {
@@ -12,11 +13,9 @@ body {
   padding: 0;
   overflow: hidden;
 
-  background-image: url(../assets/images/gradient.svg);
+  background-image: url(../assets/images/background.svg);
   background-repeat: none;
   background-size: cover;
-
-  color: white;
 }
 
 main {
